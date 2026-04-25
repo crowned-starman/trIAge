@@ -12,8 +12,10 @@ class Settings(BaseSettings):
     DEBUG:       bool = False
 
     #  Anthropic
+    GROQ_API_KEY: str = ""
     ANTHROPIC_API_KEY: str
     ANTHROPIC_MODEL:   str = "claude-sonnet-4-6"
+    
 
     #  Base de datos
     DATABASE_URL: str  # postgresql+asyncpg://user:pass@host:port/db
