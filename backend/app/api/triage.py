@@ -35,7 +35,7 @@ async def triage_patient(
     if not triage_result:
         raise TriageException(
             status_code=502,
-            message="AI classifier returned an invalid response. Please retry.",
+            message="El clasificador de IA devolvió una respuesta no valida. Por favor, intente de nuevo.",
             code="AI_INVALID_OUTPUT",
         )
 
