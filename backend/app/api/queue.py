@@ -23,7 +23,7 @@ router = APIRouter()
 
 @router.get("/queue", response_model=list[QueueResponse])
 async def list_queue(
-    status: Optional[str] = Query(None, pattern="^(waiting|in_progress|done$"),
+    status: Optional[str] = Query(None, pattern="^(waiting|in_progress|done)$"),
     priority: Optional[int] = Query(None, ge=1, le=5),
     limit: int = Query(50, ge=1, le=200),
     db: AsyncSession = Depends(get_db),
